@@ -14,7 +14,7 @@ concept Sortable = requires(T& t) {
 
 template<Sortable T>
 
-void BubbleSort(vector<T>& v) {
+void bubbleSort(vector<T>& v) {
     int n = v.size();
 
     for (int i = 0; i < n - 1; i++) {
@@ -46,15 +46,15 @@ void heapify(vector<T>& v, int n, int i)
 
 	
 	if (largest == i) 
-		break
+		break;
 	
 	swap(v[i],v[largest]);
-	i=largest
+	i=largest;
 	}
 }
 
 template<Sortable T>
-void HeapSort(vector<T>& v)
+void heapSort(vector<T>& v)
 {
 	int n = v.size();
 	for (int i = n / 2 - 1; i >= 0; i--)
